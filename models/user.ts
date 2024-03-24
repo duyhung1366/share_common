@@ -31,6 +31,8 @@ class UserInfo {
             idAnswer: string
         }[]
     }[]; // bài học đã học
+    verification_code?: string;
+    verification_created_at?: number
     constructor(args?: any) {
         if (!args) {
             args = {};
@@ -54,6 +56,8 @@ class UserInfo {
         this.status = args.status ?? 1;
         this.userRole = args?.userRole ?? 1;
         this.progess = args.progess ?? undefined;
+        this.verification_code = args.verification_code;
+        this.verification_created_at = args.verification_created_at
     }
 }
 
